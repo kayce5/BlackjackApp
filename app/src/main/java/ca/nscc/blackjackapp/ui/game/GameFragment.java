@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Random;
 
 public class GameFragment extends Fragment {
-   private TextView playerName, scoreLbl, dealerScoreLbl, topMessage;
+   private TextView playerName, scoreLbl, dealerScoreLbl, topMessage, bottomMessage;
    private Button btnStart, btnHit, btnStay, btnPlayAgain;
    private ImageView dealer1, dealer2, dealer3, dealer4, dealer5, player1, player2, player3, player4, player5;
 
@@ -90,7 +90,7 @@ public class GameFragment extends Fragment {
         scoreLbl = (TextView) root.findViewById(R.id.scoreLbl);
         dealerScoreLbl = (TextView) root.findViewById(R.id.dealerScoreLbl);
         topMessage = (TextView) root.findViewById(R.id.topMessage);
-
+        bottomMessage = (TextView) root.findViewById(R.id.bottomMessage);
 
         dealerArray[0] = dealer1;
         dealerArray[1] = dealer2;
@@ -711,6 +711,7 @@ public class GameFragment extends Fragment {
         dealerScoreLbl.setText("Dealer Score: 0");
         scoreLbl.setText("Player Score: 0");
         topMessage.setText("Let Play Blackjack");
+        bottomMessage.setVisibility(View.INVISIBLE);
         playerName.setText("Good luck " + name);
 
         for(int i = 0; i < 5; i++) {
@@ -737,6 +738,8 @@ public class GameFragment extends Fragment {
             if(dealerScore >= playerScore){
                 //Toast.makeText(getContext(), "DEALER WINS", Toast.LENGTH_SHORT).show();
                 topMessage.setText("DEALER WINS!");
+                bottomMessage.setText("DEALER WINS!");
+                bottomMessage.setVisibility(View.VISIBLE);
                 playerName.setText("Better luck next time " + name + "!");
                 endGame();
                 break;
@@ -976,6 +979,8 @@ public class GameFragment extends Fragment {
             if(dealerScore > 21) {
                 //Toast.makeText(getContext(), "BUST", Toast.LENGTH_SHORT).show();
                 topMessage.setText("PLAYER WINS!");
+                bottomMessage.setText("PLAYER WINS!");
+                bottomMessage.setVisibility(View.VISIBLE);
                 playerName.setText("You won " + name + "!");
                 endGame();
                 break;
@@ -1219,16 +1224,12 @@ public class GameFragment extends Fragment {
         if(playerScore > 21){
             //Toast.makeText(getContext(), "BUST", Toast.LENGTH_SHORT).show();
             topMessage.setText("DEALER WINS!");
+            bottomMessage.setText("DEALER WINS!");
+            bottomMessage.setVisibility(View.VISIBLE);
             playerName.setText("Better luck next time " + name + "!");
             endGame();
         }
     }
-
-
-
-
-
-
 
 
 

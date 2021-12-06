@@ -10,13 +10,15 @@
 
     <ImageView
         android:id="@+id/playerBack4"
-        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
         android:layout_marginTop="156dp"
         android:layout_marginEnd="10dp"
         android:src="@drawable/back_card"
+        android:visibility="invisible"
         app:layout_constraintEnd_toStartOf="@+id/playerBack5"
+        app:layout_constraintStart_toEndOf="@+id/playerBack3"
         app:layout_constraintTop_toBottomOf="@+id/dealerBack4"
         app:srcCompat="@drawable/back_card" />
 
@@ -24,7 +26,7 @@
         android:id="@+id/btnStay"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="@color/button"
         android:text="Stay"
         android:visibility="invisible"
@@ -37,35 +39,42 @@
         android:id="@+id/btnHit"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="68dp"
         android:backgroundTint="@color/button"
         android:text="Hit"
         android:visibility="invisible"
         app:layout_constraintEnd_toStartOf="@+id/btnStay"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerBack2" />
 
     <ImageView
-        android:visibility="invisible"
         android:id="@+id/playerBack5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="156dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="12dp"
         android:src="@drawable/back_card"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playerBack3"
         app:layout_constraintTop_toBottomOf="@+id/dealerBack5"
         app:srcCompat="@drawable/back_card" />
 
     <ImageView
-        android:visibility="invisible"
         android:id="@+id/playerBack1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="156dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="95dp"
         android:src="@drawable/back_card"
-        app:layout_constraintEnd_toStartOf="@+id/playerBack2"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/playerBack3"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dealerBack1" />
 
     <ImageView
@@ -81,14 +90,16 @@
         app:srcCompat="@drawable/back_card" />
 
     <ImageView
-        android:visibility="invisible"
         android:id="@+id/playerBack2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="156dp"
         android:layout_marginEnd="10dp"
         android:src="@drawable/back_card"
+        android:visibility="invisible"
         app:layout_constraintEnd_toStartOf="@+id/playerBack3"
+        app:layout_constraintStart_toEndOf="@+id/playerBack1"
         app:layout_constraintTop_toBottomOf="@+id/dealerBack2"
         app:srcCompat="@drawable/back_card" />
 
@@ -121,68 +132,77 @@
         app:layout_constraintVertical_bias="0.045" />
 
     <ImageView
-        android:visibility="invisible"
         android:id="@+id/dealerBack4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="10dp"
         android:src="@drawable/back_card"
+        android:visibility="invisible"
         app:layout_constraintEnd_toStartOf="@+id/dealerBack5"
+        app:layout_constraintStart_toEndOf="@+id/dealerBack3"
         app:layout_constraintTop_toBottomOf="@+id/playerName"
         app:srcCompat="@drawable/back_card" />
 
     <ImageView
-        android:visibility="invisible"
         android:id="@+id/dealerBack3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:src="@drawable/back_card"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerName"
         app:srcCompat="@drawable/back_card" />
 
     <ImageView
-        android:visibility="invisible"
         android:id="@+id/dealerBack5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
         android:layout_marginTop="52dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="10dp"
         android:src="@drawable/back_card"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dealerBack4"
         app:layout_constraintTop_toBottomOf="@+id/playerName"
         app:srcCompat="@drawable/back_card" />
 
     <ImageView
-        android:visibility="invisible"
         android:id="@+id/dealerBack2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="10dp"
         android:src="@drawable/back_card"
+        android:visibility="invisible"
         app:layout_constraintEnd_toStartOf="@+id/dealerBack3"
+        app:layout_constraintStart_toEndOf="@+id/dealerBack1"
         app:layout_constraintTop_toBottomOf="@+id/playerName"
         app:srcCompat="@drawable/back_card" />
 
     <ImageView
-        android:visibility="invisible"
         android:id="@+id/dealerBack1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="52dp"
-        android:layout_marginEnd="10dp"
         android:src="@drawable/back_card"
-        app:layout_constraintEnd_toStartOf="@+id/dealerBack2"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/dealerBack3"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerName" />
 
     <TextView
         android:id="@+id/scoreLbl"
         android:layout_width="205dp"
         android:layout_height="39dp"
+        android:layout_marginBottom="68dp"
         android:text="Score: 0"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#FFFFFF"
@@ -190,16 +210,17 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.507" />
+        app:layout_constraintTop_toBottomOf="@+id/dealerBack2"
+        app:layout_constraintVertical_bias="0.253" />
 
     <TextView
         android:id="@+id/dealerScoreLbl"
         android:layout_width="205dp"
         android:layout_height="39dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="8dp"
         android:text="Dealer Score: 0"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#FFFFFF"
@@ -207,8 +228,10 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/scoreLbl"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dealerBack2"
+        app:layout_constraintVertical_bias="0.411" />
 
     <Button
         android:backgroundTint="@color/button"
@@ -235,5 +258,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.459" />
+
+    <TextView
+        android:id="@+id/bottomMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginTop="472dp"
+        android:gravity="center"
+        android:text="Lets Play Blackjack "
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topMessage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
