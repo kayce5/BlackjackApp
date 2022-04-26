@@ -49,6 +49,9 @@ public class GameFragment extends Fragment {
     private SharedPreferences pref;
 
 
+
+    //Test*************
+
     public static GameFragment newInstance() {
         return new GameFragment();
     }
